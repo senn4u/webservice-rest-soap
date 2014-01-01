@@ -1,0 +1,13 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="UserRepositoryTest" tests="1" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="ben" time="1.388555557455E9">
+  <properties/>
+  <testcase name="test" classname="UserRepositoryTest" time="0.761"/>
+  <system-out><![CDATA[13:52:36.781 [Test worker] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [applicationContext-test.xml]
+13:52:36.980 [Test worker] INFO  o.s.c.s.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@38bd772: startup date [Wed Jan 01 13:52:36 CST 2014]; root of context hierarchy
+13:52:37.071 [Test worker] INFO  o.s.c.s.PropertySourcesPlaceholderConfigurer - Loading properties file from URL [file:/G:/Ideas/webservice-rest-soap/build/resources/test/application-test.properties]
+13:52:37.433 [Test worker] INFO  UserRepositoryTest - 1. user : User{age=28, name='Ben Yasin'}
+13:52:37.449 [Test worker] INFO  UserRepositoryTest - 2. find - savedUser : User{age=28, name='Ben Yasin'}
+13:52:37.454 [Test worker] INFO  UserRepositoryTest - 3. updatedUser : User{age=28, name='Ben Yasin'}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

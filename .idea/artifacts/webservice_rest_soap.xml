@@ -1,0 +1,62 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="webservice-rest-soap">
+    <output-path>$PROJECT_DIR$/classes/artifacts/webservice_rest_soap</output-path>
+    <root id="archive" name="webservice-rest-soap.war">
+      <element id="javaee-facet-resources" facet="webservice-rest-soap/web/Web Gradle" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="webservice-rest-soap" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: commons-logging-1.1.1" />
+          <element id="library" level="project" name="Gradle: jersey-core-1.13" />
+          <element id="library" level="project" name="Gradle: jcl-over-slf4j-1.7.1" />
+          <element id="library" level="project" name="Gradle: jsr311-api-1.1.1" />
+          <element id="library" level="project" name="Gradle: aopalliance-1.0" />
+          <element id="library" level="project" name="Gradle: spring-context-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: slf4j-api-1.7.5" />
+          <element id="library" level="project" name="Gradle: spring-tx-3.1.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-aop-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-beans-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-webmvc-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: jersey-servlet-1.13" />
+          <element id="library" level="project" name="Gradle: spring-data-mongodb-1.3.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-data-commons-1.6.3.RELEASE" />
+          <element id="library" level="project" name="Gradle: logback-classic-1.0.13" />
+          <element id="library" level="project" name="Gradle: jersey-spring-1.13" />
+          <element id="library" level="project" name="Gradle: mongo-java-driver-2.11.3" />
+          <element id="library" level="project" name="Gradle: logback-core-1.0.13" />
+          <element id="library" level="project" name="Gradle: spring-web-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-expression-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-core-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: jersey-server-1.13" />
+          <element id="library" level="project" name="Gradle: spring-test-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: geronimo-javamail_1.4_spec-1.7.1" />
+          <element id="library" level="project" name="Gradle: stax-api-1.0-2" />
+          <element id="library" level="project" name="Gradle: cxf-rt-frontend-simple-2.7.1" />
+          <element id="library" level="project" name="Gradle: cxf-rt-core-2.7.1" />
+          <element id="library" level="project" name="Gradle: cxf-api-2.7.1" />
+          <element id="library" level="project" name="Gradle: cxf-rt-ws-addr-2.7.1" />
+          <element id="library" level="project" name="Gradle: woodstox-core-asl-4.1.4" />
+          <element id="library" level="project" name="Gradle: cxf-rt-ws-policy-2.7.1" />
+          <element id="library" level="project" name="Gradle: cxf-rt-bindings-soap-2.7.1" />
+          <element id="library" level="project" name="Gradle: cxf-rt-frontend-jaxws-2.7.1" />
+          <element id="library" level="project" name="Gradle: stax2-api-3.1.1" />
+          <element id="library" level="project" name="Gradle: xml-resolver-1.2" />
+          <element id="library" level="project" name="Gradle: xmlschema-core-2.0.3" />
+          <element id="library" level="project" name="Gradle: neethi-3.0.2" />
+          <element id="library" level="project" name="Gradle: cxf-rt-transports-http-2.7.1" />
+          <element id="library" level="project" name="Gradle: cxf-rt-databinding-jaxb-2.7.1" />
+          <element id="library" level="project" name="Gradle: wsdl4j-1.6.2" />
+          <element id="library" level="project" name="Gradle: cxf-rt-bindings-xml-2.7.1" />
+          <element id="library" level="project" name="Gradle: jaxb-impl-2.1.13" />
+          <element id="library" level="project" name="Gradle: asm-3.3.1" />
+          <element id="library" level="project" name="Gradle: jersey-client-1.13" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/classes/artifacts/webservice_rest_soap/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

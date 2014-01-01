@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+	     http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		 http://www.springframework.org/schema/data/mongo
+		 http://www.springframework.org/schema/data/mongo/spring-mongo-1.3.xsd
+		 http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		 http://cxf.apache.org/jaxws
+		 http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <context:component-scan base-package="com.service" />
+
+    <bean id="userJaxRsService" class="com.webservice.jaxrs.UserJaxRsService"/>
+
+
+    <!--soap webservice bean and endpoint-->
+    <bean id="userSoapService" class="com.webservice.soap.UserSoapServiceImpl"/>
+    <jaxws:endpoint implementor="#userSoapService" address="/userSoapService" />
+
+
+    <!--mongodb-->
+    <context:property-placeholder ignore-unresolvable="true" location="classpath*:/application.properties" />
+    <mongo:mongo host="${mongo.host}" port="${mongo.port}">
+        <mongo:options connections-per-host="${mongo.connectionsPerHost}"
+                       threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
+                       connect-timeout="${mongo.connectTimeout}"  max-wait-time="${mongo.maxWaitTime}"
+                       auto-connect-retry="${mongo.autoConnectRetry}"
+                       socket-timeout="${mongo.socketTimeout}"/>
+    </mongo:mongo>
+    <mongo:db-factory dbname="${mongo.dbname}" mongo-ref="mongo" />
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+    </bean>
+    <mongo:repositories base-package="com.repository" mongo-template-ref="mongoTemplate"/>
+    <mongo:mapping-converter base-package="com.model" />
+</beans>

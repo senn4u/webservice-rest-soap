@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice-rest-soap.org" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="UserSoapService" targetNamespace="http://webservice-rest-soap.org">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice-rest-soap.org" elementFormDefault="unqualified" targetNamespace="http://webservice-rest-soap.org" version="1.0">
+<xs:element name="countUser" type="tns:countUser"/>
+<xs:element name="countUserResponse" type="tns:countUserResponse"/>
+<xs:complexType name="countUser">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="countUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="countUserResponse">
+    <wsdl:part element="tns:countUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countUser">
+    <wsdl:part element="tns:countUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UserSoapService">
+    <wsdl:operation name="countUser">
+      <wsdl:input message="tns:countUser" name="countUser">
+    </wsdl:input>
+      <wsdl:output message="tns:countUserResponse" name="countUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserSoapServiceSoapBinding" type="tns:UserSoapService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="countUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="countUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="countUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserSoapService">
+    <wsdl:port binding="tns:UserSoapServiceSoapBinding" name="UserSoapPort">
+      <soap:address location="http://localhost:8080/soap/userSoapService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
